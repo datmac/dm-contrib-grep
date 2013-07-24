@@ -1,0 +1,67 @@
+{
+  "id" : "grep",
+  "author" : {
+    "name" : "core team"
+  },
+  "title": {
+    "fr": "Filtrer des lignes correspondant à un motif donné",
+    "en": "Filter lines matching with a given pattern"
+  },
+  "description": {
+    "fr": "Recherche dans chaque ligne un *MOTIF*. Si celui est trouvé, la ligne peut soit être séléctionnée soit être ignorée.",
+    "en": "Search for lines containing a match to the given *PATTERN*. If is found, the line can either be selected or be ignored."
+  },
+  "parameters": {
+    "regex": {
+      "alias": "e",
+      "type": "text",
+      "required": true,
+      "default": "",
+      "size": "medium",
+      "pattern": ".+",
+      "maxlength": "",
+      "label": {
+        "fr": "Motif",
+        "en": "Pattern"
+      },
+      "help": {
+        "en": "Peut être une chaine de caractère ou une [expression rationnelle](http://fr.wikipedia.org/wiki/Expressions_rationnelles/ \"Permet de tester son expression\"). ",
+        "fr": "Peut être une chaine de caractère ou une [expression rationnelle](http://fr.wikipedia.org/wiki/Expressions_rationnelles/ \"Permet de tester son expression\"). "
+      }
+    },
+    "invert": {
+      "alias": "i",
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "size": "medium",
+      "pattern": "",
+      "maxlength": "",
+      "label": {
+        "fr": "Inverser",
+        "en": "Invert"
+      },
+      "help": {
+        "fr": "Inverser la mise en concordance, pour sélectionner les lignes ne correspondant pas au motif",
+        "en": "Invert the sense of matching, to select non-matching lines"
+      }
+    },
+    "delimiter": {
+      "alias": "d",
+      "type": "text",
+      "required": false,
+      "default": "\\n",
+      "size": "small",
+      "pattern": "",
+      "maxlength": "",
+      "label": {
+        "fr": "Delimiteur",
+        "en": "Delimiter"
+      },
+      "help": {
+        "fr": "Un ou plusieurs caractères séparant des portions de texte, typiquement une ligne de texte se finissant par [un caractère de fin de ligne](https://fr.wikipedia.org/wiki/Fin_de_ligne).",
+        "en": "A special character or sequence of characters signifying the end of a of text segment. For example [newline](https://en.wikipedia.org/wiki/Newline)"
+      }
+    }
+  }
+}

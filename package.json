@@ -1,0 +1,21 @@
+{
+  "name": "mill-contrib-grep",
+  "version": "0.0.0",
+  "description": "Mill's plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/milljs/mill-contrib-grep.git"
+  },
+  "keywords": [
+    "millplugin"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/milljs/mill-contrib-grep/issues"
+  }
+}
