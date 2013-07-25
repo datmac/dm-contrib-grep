@@ -4,7 +4,7 @@ var path = require('path')
 , basename = path.basename(path.dirname(__filename))
 , debug = require('debug')('mill:contrib:' + basename)
 , async = require('async')
-, Segmenter = require('segmenter.js')
+, Segmenter = require('segmenter')
 , Transform = require("stream").Transform
 ;
 
@@ -38,7 +38,6 @@ Command.prototype.parse = function (lines, done) {
   );
 }
 
-
 Command.prototype._transform = function (chunk, encoding, done) {
   if (this.begin) {
     this.begin = false;
@@ -54,8 +53,8 @@ Command.prototype.end = function () {
   );
 };
 
-module.exports = function (input, options) {
+module.exports = function (options, si) {
   var cmd = new Command(options);
-  return input.pipe(cmd);
+  return si.pipe(cmd);
 }
 
