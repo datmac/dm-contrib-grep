@@ -11,11 +11,10 @@ var path = require('path')
 function Command(options)
 {
   Transform.call(this, options);
-
-  var regex = new RegExp(options.regex, 'gi')
-
   this.begin = true;
   this.seg = new Segmenter({delimiter: options.delimiter});
+  var regex = new RegExp(options.regex, 'gi')
+
   this.funcgrep = function (item, callback) {
     var test = item.search(regex);
     callback((test >= 0 && !options.invert) || (test < 0 && options.invert));
