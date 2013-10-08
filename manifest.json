@@ -1,8 +1,5 @@
 {
   "id" : "grep",
-  "author" : {
-    "name" : "core team"
-  },
   "title": {
     "fr": "Filtrer des lignes correspondant à un motif donné",
     "en": "Filter lines matching with a given pattern"
